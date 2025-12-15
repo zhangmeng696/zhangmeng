@@ -2,182 +2,146 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>甜莓の博客 | 张梦的小世界</title>
+    <title>张梦的猫咪博客</title>
     <style>
-        /* 全局样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "微软雅黑", sans-serif;
-        }
+        /* 整体样式 */
         body {
-            background-color: #fdf2f8; /* 浅粉色背景 */
+            background-color: #f9e8f2; /* 浅粉色背景 */
+            font-family: "微软雅黑", sans-serif;
+            margin: 0;
             padding: 20px;
         }
-        /* 头部样式 */
-        .header {
+        /* 标题样式 */
+        .title {
+            color: #e6399b; /* 玫红色标题 */
             text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            color: #e53e3e; /* 玫红色标题 */
             font-size: 28px;
-            margin-bottom: 10px;
+            text-shadow: 2px 2px 3px #fcc0e8;
         }
-        .header p {
-            color: #9f7aea; /* 淡紫色副标题 */
-            font-size: 16px;
-        }
-        /* 博客内容区 */
-        .content {
-            display: flex;
-            gap: 20px;
-        }
-        .left {
-            flex: 2;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
-        }
-        .right {
-            flex: 1;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
-        }
-        /* 图片样式 */
-        .blog-img {
-            width: 100%;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
-        /* 博客文章样式 */
-        .article {
-            margin-bottom: 20px;
-        }
-        .article h2 {
-            color: #ed8936; /* 暖橙色文章标题 */
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
-        .article p {
-            color: #4a5568; /* 深灰色正文 */
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-        /* 留言板样式 */
-        .message-board h3 {
-            color: #38b2ac; /* 青绿色留言板标题 */
-            margin-bottom: 15px;
+        .subtitle {
+            color: #d863b5;
+            text-align: center;
             font-size: 20px;
+        }
+        /* 个人信息卡片 */
+        .info-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 0 10px #fcc0e8;
+        }
+        /* 图片展示区 */
+        .cat-img {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .cat-img img {
+            width: 60%;
+            border-radius: 10px;
+            border: 5px solid #fcc0e8;
+        }
+        /* 留言表单 */
+        .message-form {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 0 10px #fcc0e8;
         }
         table {
             width: 100%;
             border-collapse: collapse;
         }
         td {
-            padding: 8px;
-            color: #2d3748;
+            padding: 10px;
+            vertical-align: top;
         }
         input[type="text"], textarea {
             width: 100%;
             padding: 8px;
-            border: 1px solid #ffc0cb;
+            border: 2px solid #fcc0e8;
             border-radius: 5px;
             outline: none;
         }
         textarea {
+            height: 100px;
             resize: none;
-            height: 80px;
         }
         button {
-            background-color: #ff69b4; /* 粉色按钮 */
+            background-color: #e6399b;
             color: #fff;
             border: none;
-            padding: 8px 15px;
+            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
+            font-size: 16px;
         }
         button:hover {
-            background-color: #ff1493; /* 深粉色hover效果 */
+            background-color: #d863b5;
         }
-        /* 侧边栏个人信息 */
-        .info h3 {
-            color: #9f7aea;
-            margin-bottom: 15px;
-            font-size: 20px;
+        /* 猫咪小元素装饰 */
+        .cat-decoration {
+            text-align: center;
+            font-size: 50px;
+            color: #e6399b;
         }
-        .info p {
-            color: #4a5568;
+        /* 个人简介样式 */
+        .intro p {
             line-height: 1.8;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <!-- 头部 -->
-    <div class="header">
-        <h1>大数据2班 张梦 23170402029</h1>
-        <p>甜莓の小窝 | 分享生活与热爱</p >
-    </div>
+    <!-- 博客标题 -->
+    <h1 class="title">大数据2班 张梦 23170402029</h1>
+    <h2 class="subtitle">🐱 张梦的猫咪小窝博客 🐱</h2>
 
-    <!-- 主体内容 -->
-    <div class="content">
-        <!-- 左侧博客内容 -->
-        <div class="left">
-            <h1 style="color: #ff69b4; text-align: center; margin-bottom: 20px;">欢迎来到我的博客</h1>
-            < img src="https://img2.baidu.com/it/u=1234567890,1234567890&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=300" alt="可爱猫咪" class="blog-img">
-            
-            <div class="article">
-                <h2>🌸 我的日常小美好</h2>
-                <p>哈喽～我是张梦，一名大数据专业的女生，喜欢猫咪、甜品和记录生活里的小瞬间。这个博客会分享我的学习心得、生活趣事，还有各种可爱的小玩意儿，希望能和大家一起感受生活的甜～</p >
-            </div>
-
-            <div class="article">
-                <h2>📚 大数据学习碎碎念</h2>
-                <p>最近在学习Python数据分析，遇到了很多有趣的案例，也踩了不少坑。后续会整理成笔记发在这里，希望能帮到和我一样的小伙伴～</p >
-            </div>
-        </div>
-
-        <!-- 右侧侧边栏（留言板+个人信息） -->
-        <div class="right">
-            <!-- 个人信息 -->
-            <div class="info">
-                <h3>✨ 关于我</h3>
-                <p>姓名：张梦</p >
-                <p>专业：大数据技术</p >
-                <p>爱好：撸猫、追剧、做甜品</p >
-                <p>性格：慢热但超爱笑～</p >
-            </div>
-
-            <!-- 留言板 -->
-            <div class="message-board" style="margin-top: 30px;">
-                <h3>💬 给我留言吧</h3>
-                <table>
-                    <tr>
-                        <td align="center" colspan="2">留言区</td>
-                    </tr>
-                    <tr>
-                        <td>用户：</td>
-                        <td><input type="text" name="username" placeholder="输入你的昵称"></td>
-                    </tr>
-                    <tr>
-                        <td>你的留言：</td>
-                        <td><textarea name="message" placeholder="想说的话都可以写在这里～"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" align="center"><button>提交留言</button></td>
-                    </tr>
-                </table>
-            </div>
+    <!-- 个人信息卡片 -->
+    <div class="info-card">
+        <h3 style="color: #e6399b;">关于我</h3>
+        <div class="intro">
+            <p><strong>姓名</strong>：张梦</p>
+            <p><strong>年龄</strong>：21岁</p>
+            <p><strong>学校</strong>：贵州中医药大学时珍学院</p>
+            <p><strong>专业</strong>：大数据技术</p>
+            <p><strong>个人简介</strong>：大家好呀～我是一名21岁的大数据专业学生，就读于贵州中医药大学时珍学院。平时的我既喜欢和代码打交道，探索数据背后的奥秘，也痴迷于软萌的小猫咪，家里养了三只可爱的猫咪（奶茶、布丁、奶盖），它们是我生活里的治愈小天使。闲暇时我会带着猫咪拍拍照、记录它们的日常，也喜欢追剧、做手账，偶尔还会研究一些和宠物养护相关的小知识。希望在这个博客里，能和大家分享我的学习日常、猫咪趣事，也期待和同样喜欢猫咪的小伙伴交流～</p>
+            <p><strong>爱好</strong>：撸猫、摄影、手账、追剧、研究宠物养护、大数据相关技术学习</p>
         </div>
     </div>
+
+    <!-- 猫咪图片展示 -->
+    <div class="cat-img">
+        <img src="https://img0.baidu.com/it/u=1234567890,1234567890&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" alt="可爱猫咪合照">
+        <p>我的猫咪们的合照～奶茶（银渐层）、布丁（布偶）、奶盖（橘猫）</p>
+    </div>
+
+    <!-- 猫咪小装饰 -->
+    <div class="cat-decoration">🐾 😺 🐾</div>
+
+    <!-- 留言区 -->
+    <div class="message-form">
+        <h3 style="color: #e6399b; text-align: center;">猫咪留言板</h3>
+        <table>
+            <tr>
+                <td align="center" colspan="2"><h4>留下你的悄悄话吧～</h4></td>
+            </tr>
+            <tr>
+                <td width="20%">用户名：</td>
+                <td><input type="text" name="username" placeholder="请输入你的名字"></td>
+            </tr>
+            <tr>
+                <td>想对我说：</td>
+                <td><textarea name="message" placeholder="分享你和猫咪的故事，或者聊聊大数据学习吧～"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button>提交留言</button></td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>
